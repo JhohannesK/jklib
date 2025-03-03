@@ -25,7 +25,7 @@ export default function CategoriesPage() {
 			</div>
 			<div className='grid grid-cols-1 gap-6 pt-12 md:grid-cols-2 lg:grid-cols-3'>
 				{categories.map((category) => (
-					<Card key={category.id} className='overflow-hidden'>
+					<Card key={category.id} className='overflow-hidden py-5'>
 						<CardHeader className='flex flex-row items-center gap-4 pb-2'>
 							<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10'>
 								{category.icon}

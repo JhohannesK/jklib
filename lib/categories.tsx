@@ -28,8 +28,15 @@ import { eventItems } from './data/events';
 import { frontendFrameworkItems } from './data/frontend-frameworks';
 import { generalItems } from './data/general';
 import { cssUiFrameworkItems } from './data/css-ui-framework';
+import { colorItems } from './data/colors';
 
 export const categories: Category[] = [
+	{
+		id: 'css-ui-frameworks',
+		name: 'CSS/UI Frameworks',
+		icon: <Layout className='h-5 w-5' />,
+		items: cssUiFrameworkItems,
+	},
 	{
 		id: '3d-webgl-frameworks',
 		name: '3D/WebGL Frameworks',
@@ -41,12 +48,6 @@ export const categories: Category[] = [
 		name: 'Allrounder (jQuery like)',
 		icon: <Globe className='h-5 w-5' />,
 		items: allRounderItems,
-	},
-	{
-		id: 'animations',
-		name: 'Animations',
-		icon: <Play className='h-5 w-5' />,
-		items: animationsItems,
 	},
 	{
 		id: 'audio',
@@ -70,56 +71,7 @@ export const categories: Category[] = [
 		id: 'colors',
 		name: 'Colors',
 		icon: <Palette className='h-5 w-5' />,
-		items: [
-			{
-				id: 'chroma',
-				name: 'Chroma.js',
-				description:
-					'JavaScript library for all kinds of color manipulations',
-				url: 'https://gka.github.io/chroma.js/',
-				logo: '/placeholder.svg?height=32&width=32',
-				tags: ['color', 'manipulation'],
-				stars: 9000,
-				forks: 600,
-				category: 'colors',
-			},
-			{
-				id: 'colorjs',
-				name: 'Color.js',
-				description:
-					'A color manipulation library that works with a wide variety of color spaces',
-				url: 'https://colorjs.io',
-				logo: '/placeholder.svg?height=32&width=32',
-				tags: ['color', 'manipulation'],
-				stars: 1500,
-				forks: 100,
-				category: 'colors',
-			},
-			{
-				id: 'tinycolor',
-				name: 'TinyColor',
-				description:
-					'Fast, small color manipulation and conversion for JavaScript',
-				url: 'https://github.com/bgrins/TinyColor',
-				logo: '/placeholder.svg?height=32&width=32',
-				tags: ['color', 'manipulation'],
-				stars: 4000,
-				forks: 500,
-				category: 'colors',
-			},
-			{
-				id: 'colord',
-				name: 'colord',
-				description:
-					'A tiny yet powerful tool for high-performance color manipulations and conversions',
-				url: 'https://github.com/omgovich/colord',
-				logo: '/placeholder.svg?height=32&width=32',
-				tags: ['color', 'manipulation'],
-				stars: 3500,
-				forks: 150,
-				category: 'colors',
-			},
-		],
+		items: colorItems,
 	},
 	{
 		id: 'content-slider',
@@ -128,10 +80,10 @@ export const categories: Category[] = [
 		items: contentSliderItems,
 	},
 	{
-		id: 'css-ui-frameworks',
-		name: 'CSS/UI Frameworks',
-		icon: <Layout className='h-5 w-5' />,
-		items: cssUiFrameworkItems,
+		id: 'animations',
+		name: 'Animations',
+		icon: <Play className='h-5 w-5' />,
+		items: animationsItems,
 	},
 	{
 		id: 'databases-storage',
