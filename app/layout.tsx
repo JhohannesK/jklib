@@ -7,6 +7,7 @@ import { Search, Github, Menu } from 'lucide-react';
 import Link from 'next/link';
 import './globals.css';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
 	title: 'jklib - A Collection of Frontend Tools and Frameworks',
@@ -22,6 +23,7 @@ export default function RootLayout({
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body className='min-h-screen bg-background font-sans antialiased'>
+				<Analytics />
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'
