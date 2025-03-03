@@ -1,0 +1,48 @@
+import { Framework } from '../types';
+
+export const eventItems: Framework[] = [
+	{
+		id: 'mitt',
+		name: 'mitt',
+		description: 'Tiny 200 byte functional event emitter / pubsub',
+		url: 'https://github.com/developit/mitt',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['events', 'pubsub'],
+		stars: 9000,
+		forks: 400,
+		category: 'events',
+	},
+	{
+		id: 'eventemitter3',
+		name: 'EventEmitter3',
+		description: 'A high performance EventEmitter',
+		url: 'https://github.com/primus/eventemitter3',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['events', 'pubsub'],
+		stars: 2500,
+		forks: 200,
+		category: 'events',
+	},
+	{
+		id: 'nanoevents',
+		name: 'nanoevents',
+		description: 'Simple and tiny event emitter library for JavaScript',
+		url: 'https://github.com/ai/nanoevents',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['events', 'pubsub'],
+		stars: 1800,
+		forks: 100,
+		category: 'events',
+	},
+	{
+		id: 'tiny-emitter',
+		name: 'tiny-emitter',
+		description: 'A tiny (less than 1k) event emitter library',
+		url: 'https://github.com/scottcorgan/tiny-emitter',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['events', 'pubsub'],
+		stars: 1300,
+		forks: 100,
+		category: 'events',
+	},
+];

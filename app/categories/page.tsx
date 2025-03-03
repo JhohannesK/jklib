@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { categories } from '@/lib/data';
+import { categories } from '@/lib/categories';
 import { Button } from '@/components/ui/button';
 import {
 	Card,

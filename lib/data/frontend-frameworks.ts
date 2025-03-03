@@ -1,0 +1,48 @@
+import { Framework } from '../types';
+
+export const frontendFrameworkItems: Framework[] = [
+	{
+		id: 'react',
+		name: 'React',
+		description: 'A JavaScript library for building user interfaces',
+		url: 'https://reactjs.org',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['framework', 'ui', 'javascript'],
+		stars: 203000,
+		forks: 42000,
+		category: 'frontend-frameworks',
+	},
+	{
+		id: 'vue',
+		name: 'Vue.js',
+		description: 'The Progressive JavaScript Framework',
+		url: 'https://vuejs.org',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['framework', 'ui', 'javascript'],
+		stars: 201000,
+		forks: 33000,
+		category: 'frontend-frameworks',
+	},
+	{
+		id: 'svelte',
+		name: 'Svelte',
+		description: 'Cybernetically enhanced web apps',
+		url: 'https://svelte.dev',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['framework', 'ui', 'javascript'],
+		stars: 68000,
+		forks: 3400,
+		category: 'frontend-frameworks',
+	},
+	{
+		id: 'angular',
+		name: 'Angular',
+		description: 'Platform for building mobile and desktop web applications',
+		url: 'https://angular.io',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['framework', 'typescript', 'google'],
+		stars: 86000,
+		forks: 22000,
+		category: 'frontend-frameworks',
+	},
+];

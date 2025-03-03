@@ -1,0 +1,48 @@
+import { Framework } from '../types';
+
+export const animationsItems: Framework[] = [
+	{
+		id: 'gsap',
+		name: 'GSAP',
+		description: 'Professional-grade animation for the modern web',
+		url: 'https://greensock.com/gsap/',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['animation', 'javascript'],
+		stars: 16000,
+		forks: 1100,
+		category: 'animations',
+	},
+	{
+		id: 'animejs',
+		name: 'Anime.js',
+		description: 'A lightweight JavaScript animation library',
+		url: 'https://animejs.com',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['animation', 'javascript'],
+		stars: 43000,
+		forks: 3300,
+		category: 'animations',
+	},
+	{
+		id: 'motion',
+		name: 'Motion One',
+		description: 'A new animation library, built on the Web Animations API',
+		url: 'https://motion.dev',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['animation', 'javascript'],
+		stars: 6500,
+		forks: 200,
+		category: 'animations',
+	},
+	{
+		id: 'popmotion',
+		name: 'Popmotion',
+		description: 'Simple animation libraries for delightful user interfaces',
+		url: 'https://popmotion.io',
+		logo: '/placeholder.svg?height=32&width=32',
+		tags: ['animation', 'javascript'],
+		stars: 19500,
+		forks: 800,
+		category: 'animations',
+	},
+];

@@ -5,7 +5,8 @@ import FrameworkCard from '@/components/framework-card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { featuredFrameworks, categories } from '@/lib/data';
+import { categories } from '@/lib/categories';
+import { featuredFrameworks } from '@/lib/data/featured-framework';
 
 export default function Home() {
 	return (
