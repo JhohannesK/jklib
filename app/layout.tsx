@@ -1,12 +1,6 @@
 import type React from 'react';
 import { ThemeProvider } from '@/components/theme-provider';
-import { ModeToggle } from '@/components/mode-toggle';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Search, Github, Menu } from 'lucide-react';
-import Link from 'next/link';
 import './globals.css';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Analytics } from '@vercel/analytics/next';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';

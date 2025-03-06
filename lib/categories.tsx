@@ -29,8 +29,15 @@ import { frontendFrameworkItems } from './data/frontend-frameworks';
 import { generalItems } from './data/general';
 import { cssUiFrameworkItems } from './data/css-ui-framework';
 import { colorItems } from './data/colors';
+import { componentlibItems } from './data/component-libraries';
 
 export const categories: Category[] = [
+	{
+		id: 'component-lib',
+		name: 'Component Libraries',
+		icon: <Layout className='h-5 w-5' />,
+		items: componentlibItems,
+	},
 	{
 		id: 'css-ui-frameworks',
 		name: 'CSS/UI Frameworks',

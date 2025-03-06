@@ -7,54 +7,14 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { categories } from '@/lib/categories';
 import { featuredFrameworks } from '@/lib/data/featured-framework';
+import { Cover } from '@/components/ui/cover';
+import { LampContainer } from '@/components/ui/lamb';
+import Hero from '@/components/hero';
 
 export default function Home() {
 	return (
 		<main className='flex min-h-screen flex-col w-full'>
-			{/* Hero Section */}
-			<section className='bg-gradient-to-b from-primary/10 to-background py-12 md:py-24 flex items-center justify-center flex-col'>
-				<div className='container px-4 md:px-6'>
-					<div className='flex flex-col items-center space-y-4 text-center'>
-						<div className='space-y-2'>
-							<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl'>
-								jklib
-							</h1>
-							<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-								A continuously expanded collection of frameworks,
-								libraries, and tools for building things on the web.
-							</p>
-						</div>
-						<div className='flex w-full max-w-sm items-center space-x-2'>
-							<Input
-								type='text'
-								placeholder='Search frameworks, libraries, tools...'
-							/>
-							<Button type='submit' size='icon'>
-								<Search className='h-4 w-4' />
-							</Button>
-						</div>
-						<div className='flex flex-wrap justify-center gap-2'>
-							{[
-								'framework',
-								'tools',
-								'reactjs',
-								'nextjs',
-								'svelte',
-								'libraries',
-							].map((tag) => (
-								<Link
-									key={tag}
-									href={`/tag/${tag}`}
-									className='rounded-full bg-muted px-3 py-1 text-sm hover:bg-muted/80'
-								>
-									#{tag}
-								</Link>
-							))}
-						</div>
-					</div>
-				</div>
-			</section>
-
+			<Hero />
 			{/* Featured Section */}
 			<section className='py-12 flex items-center justify-center flex-col'>
 				<div className='container px-4 md:px-6'>

@@ -23,7 +23,8 @@ export interface Framework {
 		| 'dates'
 		| 'events'
 		| 'frontend-frameworks'
-		| 'general';
+		| 'general'
+		| 'component-lib';
 }
 
 export interface Category {
