@@ -51,6 +51,12 @@ export const categories: Category[] = [
 		items: threedWebglItems,
 	},
 	{
+		id: 'animations',
+		name: 'Animations',
+		icon: <Play className='h-5 w-5' />,
+		items: animationsItems,
+	},
+	{
 		id: 'allrounder',
 		name: 'Allrounder (jQuery like)',
 		icon: <Globe className='h-5 w-5' />,
@@ -85,12 +91,6 @@ export const categories: Category[] = [
 		name: 'Content Slider/Carousels',
 		icon: <SlidersHorizontal className='h-5 w-5' />,
 		items: contentSliderItems,
-	},
-	{
-		id: 'animations',
-		name: 'Animations',
-		icon: <Play className='h-5 w-5' />,
-		items: animationsItems,
 	},
 	{
 		id: 'databases-storage',

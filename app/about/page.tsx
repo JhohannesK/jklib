@@ -37,7 +37,7 @@ export default function AboutPage() {
 							JhohannesK/jklib
 						</a>{' '}
 						GitHub repository, which serves as a curated list of frontend
-						development tools and frameworks.
+						development tools and frameworks in the readme.
 					</p>
 				</div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
 					<p>
 						We welcome contributions from the community! If you know of a
 						great frontend tool or framework that's not listed here,
-						please consider contributing to the original repository.
+						please consider contributing to the repository.
 					</p>
 					<div className='flex justify-center py-4'>
 						<Button asChild>

@@ -37,7 +37,7 @@ export const animationsItems: Framework[] = [
 	},
 	{
 		id: 'motion',
-		name: 'Motion One',
+		name: 'Motion',
 		description: 'A new animation library, built on the Web Animations API',
 		url: 'https://motion.dev',
 		logo: '',

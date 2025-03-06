@@ -10,8 +10,8 @@ import { motion } from 'motion/react';
 
 const Hero = () => {
 	return (
-		<section className='bg-gradient-to-b from-primary/10 to-background py-12 md:py-24 flex items-center justify-center flex-col'>
-			<div className='container px-4 md:px-6'>
+		<section className='bg-gradient-to-b from-primary/10 to-background pb-12 md:pb-24 flex items-center justify-center flex-col'>
+			<div className='container'>
 				<div className='flex flex-col items-center space-y-4 text-center'>
 					<LampContainer>
 						<motion.h1
@@ -30,7 +30,7 @@ const Hero = () => {
 										jklib
 									</h1>
 								</Cover>
-								<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
+								<p className='mx-auto max-w-[700px] text-muted-foreground text-xl'>
 									A continuously expanded collection of frameworks,
 									libraries, and tools for building things on the web.
 								</p>
@@ -38,16 +38,16 @@ const Hero = () => {
 						</motion.h1>
 					</LampContainer>
 
-					<div className='flex w-full max-w-sm items-center space-x-2'>
+					<div className='flex w-full max-w-sm items-center space-x-2 px-4 md:px-6'>
 						<Input
 							type='text'
 							placeholder='Search frameworks, libraries, tools...'
 						/>
 						<Button type='submit' size='icon'>
-							<Search className='h-4 w-4' />
+							<Search className='h-3 w-3' />
 						</Button>
 					</div>
-					<div className='flex flex-wrap justify-center gap-2'>
+					<div className='flex flex-wrap justify-center gap-2 px-4 md:px-6'>
 						{[
 							'framework',
 							'tools',

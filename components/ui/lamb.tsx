@@ -64,14 +64,14 @@ export const LampContainer = ({
 					style={{
 						backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
 					}}
-					className='absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-cyan-100 text-white [--conic-position:from_290deg_at_center_top]'
+					className='absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-slate-100 text-white [--conic-position:from_290deg_at_center_top]'
 				>
 					<div className='absolute  w-40 h-[100%] right-0   bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]' />
 					<div className='absolute  w-[100%] right-0  h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]' />
 				</motion.div>
 				<div className='absolute top-1/2 h-48 w-full translate-y-12 scale-x-150  blur-2xl'></div>
 				<div className='absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md'></div>
-				<div className='absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-100 opacity-50 blur-3xl'></div>
+				<div className='absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-slate-100 opacity-50 blur-3xl'></div>
 				<motion.div
 					initial={{ width: '8rem' }}
 					whileInView={{ width: '16rem' }}
@@ -80,7 +80,7 @@ export const LampContainer = ({
 						duration: 0.8,
 						ease: 'easeInOut',
 					}}
-					className='absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-50 blur-2xl'
+					className='absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-slate-50 blur-2xl'
 				></motion.div>
 				<motion.div
 					initial={{ width: '15rem' }}
@@ -90,7 +90,7 @@ export const LampContainer = ({
 						duration: 0.8,
 						ease: 'easeInOut',
 					}}
-					className='absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-50 '
+					className='absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-slate-50 '
 				></motion.div>
 
 				<div className='absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] '></div>
