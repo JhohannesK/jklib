@@ -11,7 +11,7 @@ import {
 
 export default function CategoriesPage() {
 	return (
-		<main className='container py-12 mx-auto max-w-6xl'>
+		<main className='container py-12 mx-auto max-w-6xl px-3'>
 			<div className='flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8'>
 				<div className='flex-1 space-y-4'>
 					<h1 className='inline-block text-4xl font-bold tracking-tight lg:text-5xl'>
@@ -47,7 +47,7 @@ export default function CategoriesPage() {
 											size='sm'
 											asChild
 										>
-											<Link href={`/framework/${item.id}`}>
+											<Link target='_blank' href={item.url}>
 												{item.name}
 											</Link>
 										</Button>

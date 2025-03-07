@@ -18,7 +18,10 @@ const Navbar = () => {
 								<span className='sr-only'>Toggle menu</span>
 							</Button>
 						</SheetTrigger>
-						<SheetContent side='left' className='w-[300px] sm:w-[400px]'>
+						<SheetContent
+							side='left'
+							className='w-[300px] sm:w-[400px] pl-3'
+						>
 							<div className='flex h-16 items-center border-b'>
 								<Link
 									href='/'
