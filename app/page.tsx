@@ -1,14 +1,10 @@
-import { Search } from 'lucide-react';
 import Link from 'next/link';
 import CategorySection from '@/components/category-section';
 import FrameworkCard from '@/components/framework-card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { categories } from '@/lib/categories';
 import { featuredFrameworks } from '@/lib/data/featured-framework';
-import { Cover } from '@/components/ui/cover';
-import { LampContainer } from '@/components/ui/lamb';
 import Hero from '@/components/hero';
 
 export default function Home() {
