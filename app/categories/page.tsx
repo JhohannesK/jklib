@@ -47,7 +47,7 @@ export default function CategoriesPage() {
 											size='sm'
 											asChild
 										>
-											<Link target='_blank' href={item.url}>
+											<Link target='_blank]' href={item.url}>
 												{item.name}
 											</Link>
 										</Button>

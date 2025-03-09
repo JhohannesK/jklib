@@ -3,18 +3,18 @@ import React from 'react';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
 import { Github, Menu, Search } from 'lucide-react';
-import { Input } from './ui/input';
+import { Search as SearchComponent } from '@/components/search';
 import { ModeToggle } from './mode-toggle';
 
 const Navbar = () => {
 	return (
 		<header className='sticky top-0 flex items-center justify-center z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
-			<div className='container flex h-16 items-center justify-between w-full'>
+			<div className='container flex items-center justify-between w-full h-16'>
 				<div className='flex items-center gap-2 md:gap-6'>
 					<Sheet>
 						<SheetTrigger asChild>
 							<Button variant='ghost' size='icon' className='md:hidden'>
-								<Menu className='h-5 w-5' />
+								<Menu className='w-5 h-5' />
 								<span className='sr-only'>Toggle menu</span>
 							</Button>
 						</SheetTrigger>
@@ -22,7 +22,7 @@ const Navbar = () => {
 							side='left'
 							className='w-[300px] sm:w-[400px] pl-3'
 						>
-							<div className='flex h-16 items-center border-b'>
+							<div className='flex items-center h-16 border-b'>
 								<Link
 									href='/'
 									className='flex items-center gap-2 font-bold'
@@ -40,6 +40,9 @@ const Navbar = () => {
 								>
 									Categories
 								</Link>
+								<Link href='/search' className='text-lg font-medium'>
+									Search
+								</Link>
 								<Link href='/about' className='text-lg font-medium'>
 									About
 								</Link>
@@ -49,12 +52,15 @@ const Navbar = () => {
 					<Link href='/' className='flex items-center gap-2 font-bold'>
 						jklib
 					</Link>
-					<nav className='hidden md:flex items-center gap-6'>
+					<nav className='items-center hidden gap-6 md:flex'>
 						<Link href='/' className='text-sm font-medium'>
 							Home
 						</Link>
 						<Link href='/categories' className='text-sm font-medium'>
 							Categories
+						</Link>
+						<Link href='/search' className='text-sm font-medium'>
+							Search
 						</Link>
 						<Link href='/about' className='text-sm font-medium'>
 							About
@@ -62,21 +68,16 @@ const Navbar = () => {
 					</nav>
 				</div>
 				<div className='flex items-center gap-2'>
-					<div className='hidden md:flex relative w-full max-w-sm items-center'>
-						<Search className='absolute left-2.5 h-4 w-4 text-muted-foreground' />
-						<Input
-							type='search'
-							placeholder='Search...'
-							className='w-full rounded-full bg-background pl-8 md:w-[300px] lg:w-[320px]'
-						/>
+					<div className='items-center hidden max-w-sm md:flex'>
+						<SearchComponent />
 					</div>
 					<Button variant='ghost' size='icon' asChild>
 						<a
-							href='https://github.com/JhohannesK/jklib'
+							href='https://github.com/JhohannesK/Frontend-Store'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							<Github className='h-5 w-5' />
+							<Github className='w-5 h-5' />
 							<span className='sr-only'>GitHub</span>
 						</a>
 					</Button>
