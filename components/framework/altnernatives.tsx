@@ -8,7 +8,7 @@ import {
 } from '../ui/card';
 import { Framework } from '@/lib/types';
 import Image from 'next/image';
-import { Package, Star } from 'lucide-react';
+import { Github, Package } from 'lucide-react';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import Link from 'next/link';
@@ -44,8 +44,8 @@ const Altnernatives = ({ framework }: { framework: Framework }) => {
 							</p>
 							<div className='flex items-center gap-4 mt-3 text-sm text-muted-foreground'>
 								<div className='flex items-center gap-1'>
-									<Star className='h-3.5 w-3.5' />
-									<span>{alt.stars?.toLocaleString() || 0}</span>
+									<Github className='h-3.5 w-3.5' />
+									<span>{alt.githubUrl?.toLocaleString()}</span>
 								</div>
 								<div className='flex items-center gap-1'>
 									<Package className='h-3.5 w-3.5' />
@@ -91,12 +91,10 @@ const Altnernatives = ({ framework }: { framework: Framework }) => {
 						<tbody>
 							<tr className='border-b'>
 								<td className='p-2 font-medium'>GitHub Stars</td>
-								<td className='p-2'>
-									{framework.stars?.toLocaleString() || 0}
-								</td>
+								<td className='p-2'>{0}</td>
 								{getSimilarFrameworks(framework, 3).map((alt) => (
 									<td key={alt.id} className='p-2'>
-										{alt.stars?.toLocaleString() || 0}
+										{0}
 									</td>
 								))}
 							</tr>

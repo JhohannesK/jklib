@@ -1,5 +1,5 @@
 'use client';
-import { ExternalLink, GitFork, Heart, Star } from 'lucide-react';
+import { ExternalLink, Heart, Github } from 'lucide-react';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
@@ -14,9 +14,11 @@ import { Badge } from '../ui/badge';
 const FrameworkPage = ({ framework }: { framework: Framework }) => {
 	const [activeTab, setActiveTab] = useState('overview');
 	const [isFavorite, setIsFavorite] = useState(false);
+
 	const toggleFavorite = () => {
 		setIsFavorite(!isFavorite);
 	};
+
 	return (
 		<main className='container max-w-6xl px-3 py-12 mx-auto'>
 			<div className='space-y-8'>
@@ -24,7 +26,7 @@ const FrameworkPage = ({ framework }: { framework: Framework }) => {
 					<div className='flex items-center gap-4'>
 						{framework.logo ? (
 							<Image
-								src={framework.logo || '/placeholder.svg'}
+								src={framework.logo}
 								alt={framework.name}
 								width={64}
 								height={64}
@@ -38,14 +40,17 @@ const FrameworkPage = ({ framework }: { framework: Framework }) => {
 						<div>
 							<h1 className='text-3xl font-bold'>{framework.name}</h1>
 							<div className='flex items-center gap-4 text-muted-foreground'>
-								<div className='flex items-center gap-1'>
-									<Star className='w-4 h-4' />
-									<span>{framework.stars?.toLocaleString() || 0}</span>
-								</div>
-								<div className='flex items-center gap-1'>
-									<GitFork className='w-4 h-4' />
-									<span>{framework.forks?.toLocaleString() || 0}</span>
-								</div>
+								{framework.githubUrl && (
+									<a
+										href={framework.githubUrl}
+										target='_blank'
+										rel='noopener noreferrer'
+										className='flex items-center gap-1 hover:text-primary'
+									>
+										<Github className='w-4 h-4' />
+										<span>GitHub</span>
+									</a>
+								)}
 								<div className='text-sm'>Updated 3 months ago</div>
 							</div>
 						</div>

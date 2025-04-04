@@ -6,10 +6,9 @@ export const threedWebglItems: Framework[] = [
 		name: 'Three.js',
 		description: 'JavaScript 3D library',
 		url: 'https://threejs.org',
+		githubUrl: 'https://github.com/mrdoob/three.js',
 		logo: '',
 		tags: ['3d', 'webgl', 'javascript'],
-		stars: 88000,
-		forks: 33000,
 		category: '3d-webgl-frameworks',
 	},
 	{
@@ -18,10 +17,9 @@ export const threedWebglItems: Framework[] = [
 		description:
 			'A powerful, beautiful, simple, and open game and rendering engine',
 		url: 'https://www.babylonjs.com',
+		githubUrl: 'https://github.com/BabylonJS/Babylon.js',
 		logo: '',
 		tags: ['3d', 'webgl', 'javascript', 'game-engine'],
-		stars: 19000,
-		forks: 3300,
 		category: '3d-webgl-frameworks',
 	},
 	{
@@ -29,10 +27,9 @@ export const threedWebglItems: Framework[] = [
 		name: 'PlayCanvas',
 		description: 'Fast and lightweight JavaScript game engine',
 		url: 'https://playcanvas.com',
+		githubUrl: 'https://github.com/playcanvas/engine',
 		logo: '',
 		tags: ['3d', 'webgl', 'javascript', 'game-engine'],
-		stars: 8000,
-		forks: 1300,
 		category: '3d-webgl-frameworks',
 	},
 	{
@@ -40,10 +37,9 @@ export const threedWebglItems: Framework[] = [
 		name: 'A-Frame',
 		description: 'Web framework for building virtual reality experiences',
 		url: 'https://aframe.io',
+		githubUrl: 'https://github.com/aframevr/aframe',
 		logo: '',
 		tags: ['3d', 'webgl', 'javascript', 'vr'],
-		stars: 15000,
-		forks: 3800,
 		category: '3d-webgl-frameworks',
 	},
 ];

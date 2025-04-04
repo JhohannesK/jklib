@@ -1,15 +1,14 @@
 import { Framework } from '../types';
 
-export const audioItems: Framework[] = [
+export const audioFrameworks: Framework[] = [
 	{
 		id: 'howler',
 		name: 'Howler.js',
-		description: 'JavaScript audio library for the modern web',
+		description: 'Modern audio library for the web',
 		url: 'https://howlerjs.com',
+		githubUrl: 'https://github.com/goldfire/howler.js',
 		logo: '',
-		tags: ['audio', 'javascript'],
-		stars: 20000,
-		forks: 2000,
+		tags: ['audio', 'web-audio', 'sound'],
 		category: 'audio',
 	},
 	{
@@ -18,33 +17,31 @@ export const audioItems: Framework[] = [
 		description:
 			'A Web Audio framework for making interactive music in the browser',
 		url: 'https://tonejs.github.io',
+		githubUrl: 'https://github.com/Tonejs/Tone.js',
 		logo: '',
-		tags: ['audio', 'javascript', 'music'],
-		stars: 12000,
-		forks: 1200,
+		tags: ['audio', 'music', 'synthesis'],
 		category: 'audio',
 	},
 	{
 		id: 'wavesurfer',
-		name: 'wavesurfer.js',
-		description: 'Navigable waveform built on Web Audio and Canvas',
+		name: 'WaveSurfer.js',
+		description:
+			'Interactive navigable audio visualization using Web Audio and Canvas',
 		url: 'https://wavesurfer-js.org',
+		githubUrl: 'https://github.com/wavesurfer-js/wavesurfer.js',
 		logo: '',
-		tags: ['audio', 'javascript', 'visualization'],
-		stars: 6500,
-		forks: 1300,
+		tags: ['audio', 'visualization', 'waveform'],
 		category: 'audio',
 	},
 	{
-		id: 'pizzicato',
-		name: 'Pizzicato.js',
+		id: 'soundjs',
+		name: 'SoundJS',
 		description:
-			'A library that simplifies the way you create and manipulate sounds with the Web Audio API',
-		url: 'https://alemangui.github.io/pizzicato/',
+			'A JavaScript library that provides a simple API for working with audio',
+		url: 'https://createjs.com/soundjs',
+		githubUrl: 'https://github.com/CreateJS/SoundJS',
 		logo: '',
-		tags: ['audio', 'javascript'],
-		stars: 2500,
-		forks: 300,
+		tags: ['audio', 'createjs', 'sound'],
 		category: 'audio',
 	},
 ];

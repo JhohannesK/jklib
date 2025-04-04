@@ -1,15 +1,14 @@
 import { Framework } from '../types';
 
-export const colorItems: Framework[] = [
+export const colorFrameworks: Framework[] = [
 	{
 		id: 'chroma',
 		name: 'Chroma.js',
 		description: 'JavaScript library for all kinds of color manipulations',
-		url: 'https://gka.github.io/chroma.js/',
+		url: 'https://gka.github.io/chroma.js',
+		githubUrl: 'https://github.com/gka/chroma.js',
 		logo: '',
-		tags: ['color', 'manipulation'],
-		stars: 9000,
-		forks: 600,
+		tags: ['colors', 'visualization', 'manipulation'],
 		category: 'colors',
 	},
 	{
@@ -18,10 +17,9 @@ export const colorItems: Framework[] = [
 		description:
 			'A color manipulation library that works with a wide variety of color spaces',
 		url: 'https://colorjs.io',
+		githubUrl: 'https://github.com/LeaVerou/color.js',
 		logo: '',
-		tags: ['color', 'manipulation'],
-		stars: 1500,
-		forks: 100,
+		tags: ['colors', 'manipulation', 'spaces'],
 		category: 'colors',
 	},
 	{
@@ -29,11 +27,10 @@ export const colorItems: Framework[] = [
 		name: 'TinyColor',
 		description:
 			'Fast, small color manipulation and conversion for JavaScript',
-		url: 'https://github.com/bgrins/TinyColor',
+		url: 'https://bgrins.github.io/TinyColor',
+		githubUrl: 'https://github.com/bgrins/TinyColor',
 		logo: '',
-		tags: ['color', 'manipulation'],
-		stars: 4000,
-		forks: 500,
+		tags: ['colors', 'conversion', 'manipulation'],
 		category: 'colors',
 	},
 	{
@@ -42,10 +39,30 @@ export const colorItems: Framework[] = [
 		description:
 			'A tiny yet powerful tool for high-performance color manipulations and conversions',
 		url: 'https://github.com/omgovich/colord',
+		githubUrl: 'https://github.com/omgovich/colord',
 		logo: '',
-		tags: ['color', 'manipulation'],
-		stars: 3500,
-		forks: 150,
+		tags: ['colors', 'manipulation', 'performance'],
+		category: 'colors',
+	},
+	{
+		id: 'color',
+		name: 'Color',
+		description: 'JavaScript color conversion and manipulation library',
+		url: 'https://github.com/Qix-/color',
+		githubUrl: 'https://github.com/Qix-/color',
+		logo: '',
+		tags: ['colors', 'conversion', 'manipulation'],
+		category: 'colors',
+	},
+	{
+		id: 'colormath',
+		name: 'ColorMath',
+		description:
+			'A JavaScript library for color space conversions and color math',
+		url: 'https://github.com/antimatter15/jscolor',
+		githubUrl: 'https://github.com/antimatter15/jscolor',
+		logo: '',
+		tags: ['colors', 'math', 'conversion'],
 		category: 'colors',
 	},
 ];

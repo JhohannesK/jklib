@@ -6,10 +6,9 @@ export const chartItems: Framework[] = [
 		name: 'D3.js',
 		description: 'Data-Driven Documents',
 		url: 'https://d3js.org',
+		githubUrl: 'https://github.com/d3/d3',
 		logo: '',
 		tags: ['data', 'visualization', 'svg'],
-		stars: 103000,
-		forks: 22000,
 		category: 'charts',
 	},
 	{
@@ -18,10 +17,9 @@ export const chartItems: Framework[] = [
 		description:
 			'Simple yet flexible JavaScript charting for designers & developers',
 		url: 'https://www.chartjs.org',
+		githubUrl: 'https://github.com/chartjs/Chart.js',
 		logo: '',
 		tags: ['charts', 'canvas', 'responsive'],
-		stars: 59000,
-		forks: 11000,
 		category: 'charts',
 	},
 	{
@@ -29,10 +27,9 @@ export const chartItems: Framework[] = [
 		name: 'ECharts',
 		description: 'An Open Source JavaScript Visualization Library',
 		url: 'https://echarts.apache.org',
+		githubUrl: 'https://github.com/apache/echarts',
 		logo: '',
 		tags: ['charts', 'visualization', 'canvas'],
-		stars: 53000,
-		forks: 19000,
 		category: 'charts',
 	},
 	{
@@ -40,10 +37,9 @@ export const chartItems: Framework[] = [
 		name: 'Highcharts',
 		description: 'Interactive JavaScript charts for your web pages',
 		url: 'https://www.highcharts.com',
+		githubUrl: 'https://github.com/highcharts/highcharts',
 		logo: '',
 		tags: ['charts', 'interactive', 'svg'],
-		stars: 11000,
-		forks: 3000,
 		category: 'charts',
 	},
 ];

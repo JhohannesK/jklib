@@ -6,10 +6,9 @@ export const cssUiFrameworkItems: Framework[] = [
 		name: 'Tailwind CSS',
 		description: 'A utility-first CSS framework for rapid UI development',
 		url: 'https://tailwindcss.com',
+		githubUrl: 'https://github.com/tailwindlabs/tailwindcss',
 		logo: '',
 		tags: ['css', 'framework', 'utility'],
-		stars: 68000,
-		forks: 3400,
 		category: 'css-ui-frameworks',
 	},
 	{
@@ -18,10 +17,9 @@ export const cssUiFrameworkItems: Framework[] = [
 		description:
 			'The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites',
 		url: 'https://getbootstrap.com',
+		githubUrl: 'https://github.com/twbs/bootstrap',
 		logo: '',
 		tags: ['css', 'framework', 'responsive'],
-		stars: 160000,
-		forks: 78000,
 		category: 'css-ui-frameworks',
 	},
 	{
@@ -29,10 +27,9 @@ export const cssUiFrameworkItems: Framework[] = [
 		name: 'Bulma',
 		description: 'Modern CSS framework based on Flexbox',
 		url: 'https://bulma.io',
+		githubUrl: 'https://github.com/jgthms/bulma',
 		logo: '',
 		tags: ['css', 'framework', 'flexbox'],
-		stars: 46000,
-		forks: 3800,
 		category: 'css-ui-frameworks',
 	},
 	{
@@ -40,10 +37,9 @@ export const cssUiFrameworkItems: Framework[] = [
 		name: 'UnoCSS',
 		description: 'The instant on-demand atomic CSS engine',
 		url: 'https://unocss.dev',
+		githubUrl: 'https://github.com/unocss/unocss',
 		logo: '',
 		tags: ['css', 'framework', 'utility'],
-		stars: 12000,
-		forks: 700,
 		category: 'css-ui-frameworks',
 	},
 ];

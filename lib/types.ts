@@ -7,7 +7,7 @@ export interface Framework {
 	url: string;
 	logo?: string;
 	tags: string[];
-	stars?: number;
+	githubUrl?: string;
 	forks?: number;
 	category:
 		| '3d-webgl-frameworks'
@@ -24,7 +24,30 @@ export interface Framework {
 		| 'events'
 		| 'frontend-frameworks'
 		| 'general'
-		| 'component-lib';
+		| 'component-lib'
+		| 'maps'
+		| 'testing'
+		| 'tables-spreadsheets'
+		| 'selects'
+		| 'loaders'
+		| 'ui-elements'
+		| 'typography-text'
+		| 'video'
+		| 'image-processing'
+		| 'scrolling'
+		| 'touch-gestures'
+		| 'templating'
+		| 'http-requests'
+		| 'icons'
+		| 'validation'
+		| 'internationalization'
+		| 'numbers-currencies'
+		| 'statistics-data-analysis'
+		| 'module-loaders'
+		| 'lazy-loading'
+		| 'neural-networks'
+		| 'social'
+		| 'utility-libraries';
 }
 
 export interface Category {

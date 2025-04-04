@@ -1,0 +1,68 @@
+import { Framework } from '../types';
+
+export const videoItems: Framework[] = [
+	{
+		id: 'fitvid',
+		name: 'Fitvid',
+		description: 'Responsive videos',
+		url: 'http://fitvidsjs.com/',
+		githubUrl: 'https://github.com/davatron5000/FitVids.js',
+		tags: ['video', 'responsive', 'jquery'],
+		category: 'video',
+	},
+	{
+		id: 'mediaelement',
+		name: 'MediaElement.js',
+		description: 'Video and audio handling',
+		url: 'http://mediaelementjs.com/',
+		githubUrl: 'https://github.com/mediaelement/mediaelement',
+		tags: ['video', 'audio', 'player'],
+		category: 'video',
+	},
+	{
+		id: 'plyr',
+		name: 'Plyr',
+		description:
+			'A simple HTML5 media player with custom controls and WebVTT captions',
+		url: 'http://plyr.io/',
+		githubUrl: 'https://github.com/sampotts/plyr',
+		tags: ['video', 'player', 'html5'],
+		category: 'video',
+	},
+	{
+		id: 'talkie',
+		name: 'talkie',
+		description: 'Combines audio and animations',
+		url: 'https://github.com/kiln/talkie',
+		githubUrl: 'https://github.com/kiln/talkie',
+		tags: ['video', 'audio', 'animations'],
+		category: 'video',
+	},
+	{
+		id: 'videojs',
+		name: 'Video.js',
+		description: 'Open source HTML5 video player',
+		url: 'http://www.videojs.com/',
+		githubUrl: 'https://github.com/videojs/video.js',
+		tags: ['video', 'player', 'html5'],
+		category: 'video',
+	},
+	{
+		id: 'hls',
+		name: 'hls.js',
+		description: 'HTTP Live Streaming client',
+		url: 'https://github.com/video-dev/hls.js',
+		githubUrl: 'https://github.com/video-dev/hls.js',
+		tags: ['video', 'streaming', 'hls'],
+		category: 'video',
+	},
+	{
+		id: 'shaka',
+		name: 'Shaka Player',
+		description: 'DASH/EME video player library',
+		url: 'https://shaka-player-demo.appspot.com/docs/api/index.html',
+		githubUrl: 'https://github.com/google/shaka-player',
+		tags: ['video', 'dash', 'eme'],
+		category: 'video',
+	},
+];
