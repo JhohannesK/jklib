@@ -1,16 +1,25 @@
 import { Framework } from '../types';
 
-export const generalItems: Framework[] = [
+export const generalFrameworks: Framework[] = [
 	{
 		id: 'lodash',
 		name: 'Lodash',
 		description:
 			'A modern JavaScript utility library delivering modularity, performance & extras',
 		url: 'https://lodash.com',
+		githubUrl: 'https://github.com/lodash/lodash',
 		logo: '',
-		tags: ['utility', 'functional'],
-		stars: 55000,
-		forks: 6800,
+		tags: ['utility', 'functional', 'performance'],
+		category: 'general',
+	},
+	{
+		id: 'underscore',
+		name: 'Underscore.js',
+		description: "JavaScript's utility _ belt",
+		url: 'https://underscorejs.org',
+		githubUrl: 'https://github.com/jashkenas/underscore',
+		logo: '',
+		tags: ['utility', 'functional', 'collection'],
 		category: 'general',
 	},
 	{
@@ -18,33 +27,19 @@ export const generalItems: Framework[] = [
 		name: 'Ramda',
 		description: 'A practical functional library for JavaScript programmers',
 		url: 'https://ramdajs.com',
+		githubUrl: 'https://github.com/ramda/ramda',
 		logo: '',
-		tags: ['utility', 'functional'],
-		stars: 22000,
-		forks: 1700,
+		tags: ['utility', 'functional', 'immutable'],
 		category: 'general',
 	},
 	{
-		id: 'underscore',
-		name: 'Underscore',
-		description: "JavaScript's utility _ belt",
-		url: 'https://underscorejs.org',
+		id: 'rxjs',
+		name: 'RxJS',
+		description: 'A reactive programming library for JavaScript',
+		url: 'https://rxjs.dev',
+		githubUrl: 'https://github.com/ReactiveX/rxjs',
 		logo: '',
-		tags: ['utility', 'functional'],
-		stars: 26000,
-		forks: 5700,
-		category: 'general',
-	},
-	{
-		id: 'immer',
-		name: 'Immer',
-		description:
-			'Create the next immutable state by mutating the current one',
-		url: 'https://immerjs.github.io/immer/',
-		logo: '',
-		tags: ['immutable', 'state'],
-		stars: 25000,
-		forks: 800,
+		tags: ['reactive', 'observables', 'async'],
 		category: 'general',
 	},
 ];

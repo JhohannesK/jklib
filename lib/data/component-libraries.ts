@@ -9,6 +9,7 @@ export const componentlibItems: Framework[] = [
 			'Beautifully-designed, accessible components and a code distribution platform',
 		tags: ['ui', 'components', 'v0'],
 		url: 'https://ui.shadcn.com/',
+		githubUrl: 'https://github.com/shadcn-ui/ui',
 	},
 	{
 		id: 'materialUi',
@@ -18,6 +19,7 @@ export const componentlibItems: Framework[] = [
 			'Comprehensive suite of free UI tools to help you ship new features faster',
 		tags: ['ui', 'components'],
 		url: 'https://mui.com/',
+		githubUrl: 'https://github.com/mui/material-ui',
 	},
 	{
 		id: 'semanticUI',
@@ -26,6 +28,7 @@ export const componentlibItems: Framework[] = [
 		description: 'Semantic UI React provides React components',
 		tags: ['ui', 'components'],
 		url: 'https://react.semantic-ui.com/',
+		githubUrl: 'https://github.com/Semantic-Org/Semantic-UI-React',
 	},
 	{
 		id: 'chakra',
@@ -35,6 +38,7 @@ export const componentlibItems: Framework[] = [
 			'Chakra UI is a component system for building products with speed',
 		tags: ['ui', 'components'],
 		url: 'https://chakra-ui.com/',
+		githubUrl: 'https://github.com/chakra-ui/chakra-ui',
 	},
 	{
 		id: 'ant design',
@@ -44,6 +48,7 @@ export const componentlibItems: Framework[] = [
 			'Help designers/developers building beautiful products more flexible and working with happiness',
 		tags: ['ui', 'components'],
 		url: 'https://ant.design/',
+		githubUrl: 'https://github.com/ant-design/ant-design',
 	},
 	{
 		id: 'heroUI',
@@ -53,6 +58,7 @@ export const componentlibItems: Framework[] = [
 			'Beautiful, fast and modern React UI library for building accessible and customizable web applications.',
 		tags: ['ui', 'components'],
 		url: 'https://www.heroui.com/',
+		githubUrl: 'https://github.com/hero-ui/hero-ui',
 	},
 	{
 		id: 'mantine',
@@ -62,5 +68,6 @@ export const componentlibItems: Framework[] = [
 			'Build fully functional accessible web applications faster than ever',
 		tags: ['ui', 'components'],
 		url: 'https://mantine.dev/',
+		githubUrl: 'https://github.com/mantinedev/mantine',
 	},
 ];

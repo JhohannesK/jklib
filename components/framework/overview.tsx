@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Button } from '../ui/button';
-import { Copy, Star } from 'lucide-react';
+import { Copy, Star, Github } from 'lucide-react';
 import { Badge } from '../ui/badge';
 import { Progress } from '../ui/progress';
 import { Framework } from '@/lib/types';
@@ -114,16 +114,25 @@ const Overview = ({ framework }: { framework: Framework }) => {
 						<CardTitle>Community Stats</CardTitle>
 					</CardHeader>
 					<CardContent className='space-y-4'>
-						<div>
-							<div className='flex items-center justify-between'>
-								<p className='text-sm font-medium'>GitHub Stars</p>
-								<p className='flex items-center'>
-									<Star className='w-4 h-4 mr-1 text-yellow-400' />
-									{framework.stars?.toLocaleString() || 0}
-								</p>
+						{framework.githubUrl && (
+							<div>
+								<div className='flex items-center justify-between'>
+									<p className='text-sm font-medium'>
+										GitHub Repository
+									</p>
+									<a
+										href={framework.githubUrl}
+										target='_blank'
+										rel='noopener noreferrer'
+										className='flex items-center gap-1 hover:text-primary'
+									>
+										<Github className='w-4 h-4' />
+										<span>View on GitHub</span>
+									</a>
+								</div>
+								<Progress value={85} className='h-2 mt-2' />
 							</div>
-							<Progress value={85} className='h-2 mt-2' />
-						</div>
+						)}
 						<div>
 							<div className='flex items-center justify-between'>
 								<p className='text-sm font-medium'>Contributors</p>
