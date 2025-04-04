@@ -152,12 +152,5 @@ function filterFrameworks(
 		);
 	}
 
-	// Apply minimum stars filter
-	if (filters.minStars && filters.minStars > 0) {
-		results = results.filter(
-			(framework) => (framework.stars || 0) >= filters.minStars
-		);
-	}
-
 	return results;
 }
