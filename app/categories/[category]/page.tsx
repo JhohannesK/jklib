@@ -8,7 +8,7 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
 	const { category } = await params;
 
 	return (
-		<div className='container h-screen px-3 py-12 mx-auto md:px-5 '>
+		<div className='container px-3 py-12 mx-auto md:px-5 '>
 			{categories.map((cat) => {
 				return (
 					<React.Fragment key={cat.id}>
