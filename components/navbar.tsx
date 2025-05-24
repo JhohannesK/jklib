@@ -8,7 +8,7 @@ import { ModeToggle } from './mode-toggle';
 
 const Navbar = () => {
 	return (
-		<header className='sticky top-0 flex items-center justify-center z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+		<header className='sticky px-3 top-0 flex items-center justify-center z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
 			<div className='container flex items-center justify-between w-full h-16'>
 				<div className='flex items-center gap-2 md:gap-6'>
 					<Sheet>

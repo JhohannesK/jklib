@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<body className='min-h-screen bg-background font-sans antialiased'>
+			<body className='min-h-screen font-sans antialiased bg-background'>
 				<Analytics />
 				<ThemeProvider
 					attribute='class'
@@ -26,7 +26,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<div className='relative flex min-h-screen flex-col w-full'>
+					<div className='relative flex flex-col w-full min-h-screen'>
 						<Navbar />
 						{children}
 						<Footer />
