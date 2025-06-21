@@ -142,11 +142,11 @@ const FrameworkPage = ({
 					onValueChange={setActiveTab}
 					className='space-y-4'
 				>
-					<TabsList className='justify-start w-full'>
+					<TabsList className='w-full justify-start overflow-x-auto'>
 						<TabsTrigger value='overview'>Overview</TabsTrigger>
 						<TabsTrigger value='installation'>Installation</TabsTrigger>
 						<TabsTrigger value='tutorials'>Tutorials</TabsTrigger>
-						<TabsTrigger value='reviews'>Reviews</TabsTrigger>
+						{/* <TabsTrigger value='reviews'>Reviews</TabsTrigger> */}
 						<TabsTrigger value='alternatives'>Alternatives</TabsTrigger>
 					</TabsList>
 

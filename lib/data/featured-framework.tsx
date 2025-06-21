@@ -10,6 +10,7 @@ export const featuredFrameworks: Framework[] = [
 		logo: '',
 		tags: ['framework', 'ui', 'javascript'],
 		category: 'frontend-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=U5ETOo6R5vM'],
 	},
 	{
 		id: 'vue',
@@ -20,6 +21,7 @@ export const featuredFrameworks: Framework[] = [
 		logo: '',
 		tags: ['framework', 'ui', 'javascript'],
 		category: 'frontend-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=sUH7PDUswio'],
 	},
 	{
 		id: 'svelte',
@@ -30,6 +32,7 @@ export const featuredFrameworks: Framework[] = [
 		logo: '',
 		tags: ['framework', 'ui', 'javascript'],
 		category: 'frontend-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=uWDBEUkTRGk'],
 	},
 	{
 		id: 'nextjs',
@@ -70,6 +73,7 @@ export const featuredFrameworks: Framework[] = [
 		logo: '',
 		tags: ['data', 'visualization', 'svg'],
 		category: 'charts',
+		tutorials: ['https://www.youtube.com/watch?v=FSlxP47NyCU'],
 	},
 	{
 		id: 'shadcn',
@@ -80,5 +84,11 @@ export const featuredFrameworks: Framework[] = [
 		tags: ['ui', 'components', 'v0'],
 		url: 'https://ui.shadcn.com/',
 		githubUrl: 'https://github.com/shadcn-ui/ui',
+		tutorials: [
+			'https://www.youtube.com/watch?v=2Eqg6Ea45cY',
+			'https://www.youtube.com/watch?v=5TH3V_5ncmQ',
+			'https://www.youtube.com/watch?v=SjsQdfvxjL8',
+			'https://www.youtube.com/watch?v=O4gV1o1GXJ0',
+		],
 	},
 ];

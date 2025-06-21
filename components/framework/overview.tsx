@@ -35,19 +35,18 @@ const Overview = ({
 	githubInfo: GithubInfo;
 	npmInfo: NpmInfo;
 }) => {
-	console.log('🚀 ~ framework:', framework);
 	const displayVersion = githubInfo?.latest_release || npmInfo?.version;
 	const versionSource = githubInfo?.latest_release ? 'GitHub' : 'npm';
 
 	return (
-		<div className='grid gap-8 md:grid-cols-3'>
-			<div className='space-y-6 md:col-span-2'>
+		<div className='grid gap-8 grid-cols-1 md:grid-cols-3'>
+			<div className='space-y-6 md:col-span-2 '>
 				{githubInfo?.readme && (
 					<Card className='py-3'>
 						<CardHeader>
 							<CardTitle>README</CardTitle>
 						</CardHeader>
-						<CardContent className='prose max-w-none dark:prose-invert'>
+						<CardContent className='prose dark:prose-invert overflow-x-auto'>
 							<ReactMarkdown
 								remarkPlugins={[remarkGfm]}
 								rehypePlugins={[rehypeRaw]}
@@ -87,32 +86,6 @@ const Overview = ({
 						</CardContent>
 					</Card>
 				)}
-
-				{/* <Card className='py-3'>
-					<CardHeader>
-						<CardTitle>About {framework.name}</CardTitle>
-					</CardHeader>
-					<CardContent className=''>
-						<p className='leading-relaxed'>
-							{framework.description} Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit. Proin euismod, nisi vel
-							consectetur interdum, libero augue commodo nisi, at lacinia
-							enim ex vitae est. Etiam et condimentum tortor. Donec
-							euismod, nisi vel consectetur interdum, libero augue
-							commodo nisi, at lacinia enim ex vitae est.
-						</p>
-						<div className='mt-6'>
-							<h3 className='mb-2 font-semibold'>Key Features:</h3>
-							<ul className='pl-6 space-y-1 list-disc'>
-								<li>Feature one of {framework.name}</li>
-								<li>Another important feature</li>
-								<li>Something that makes it stand out</li>
-								<li>Performance benefits</li>
-								<li>Developer experience improvements</li>
-							</ul>
-						</div>
-					</CardContent>
-				</Card> */}
 			</div>
 
 			<div className='space-y-6'>
@@ -120,7 +93,7 @@ const Overview = ({
 					<CardHeader>
 						<CardTitle>Package Information</CardTitle>
 					</CardHeader>
-					<CardContent className='space-y-4'>
+					<CardContent className='space-y-4 overflow-x-auto'>
 						{displayVersion && (
 							<div>
 								<p className='text-sm font-medium'>Latest Version</p>

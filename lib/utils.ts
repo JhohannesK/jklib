@@ -9,17 +9,21 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getAllFrameworks() {
-	const allFrameworks = [...featuredFrameworks];
+	const allFrameworksMap = new Map<string, Framework>();
+
+	featuredFrameworks.forEach((framework) => {
+		allFrameworksMap.set(framework.id, framework);
+	});
 
 	categories.forEach((category) => {
 		category.items.forEach((item) => {
-			if (!allFrameworks.some((f) => f.id === item.id)) {
-				allFrameworks.push(item);
+			if (!allFrameworksMap.has(item.id)) {
+				allFrameworksMap.set(item.id, item);
 			}
 		});
 	});
 
-	return allFrameworks;
+	return Array.from(allFrameworksMap.values());
 }
 
 export function getSimilarFrameworks(framework: Framework, count = 3) {

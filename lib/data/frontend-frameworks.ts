@@ -8,9 +8,9 @@ export const frontendFrameworks: Framework[] = [
 		url: 'https://reactjs.org',
 		githubUrl: 'https://github.com/facebook/react',
 		logo: '',
+		tutorials: ['https://www.youtube.com/watch?v=U5ETOo6R5vM'],
 		tags: ['ui', 'components', 'virtual-dom'],
 		category: 'frontend-frameworks',
-		tutorials: ['https://www.youtube.com/watch?v=U5ETOo6R5vM'],
 	},
 	{
 		id: 'vue',
