@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Github, Menu, Search } from 'lucide-react';
 import { Search as SearchComponent } from '@/components/search';
 import { ModeToggle } from './mode-toggle';
+import Image from 'next/image';
 
 const Navbar = () => {
 	return (
@@ -27,6 +28,12 @@ const Navbar = () => {
 									href='/'
 									className='flex items-center gap-2 font-bold'
 								>
+									<Image
+										src={'jklib_logo.png'}
+										alt='logo'
+										width={32}
+										height={32}
+									/>
 									jklib
 								</Link>
 							</div>
@@ -50,6 +57,12 @@ const Navbar = () => {
 						</SheetContent>
 					</Sheet>
 					<Link href='/' className='flex items-center gap-2 font-bold'>
+						<Image
+							src={'/jklib_logo.png'}
+							alt='logo'
+							width={32}
+							height={32}
+						/>
 						jklib
 					</Link>
 					<nav className='items-center hidden gap-6 md:flex'>
@@ -59,9 +72,9 @@ const Navbar = () => {
 						<Link href='/categories' className='text-sm font-medium'>
 							Categories
 						</Link>
-						<Link href='/search' className='text-sm font-medium'>
+						{/* <Link href='/search' className='text-sm font-medium'>
 							Search
-						</Link>
+						</Link> */}
 						<Link href='/about' className='text-sm font-medium'>
 							About
 						</Link>
