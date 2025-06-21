@@ -10,6 +10,7 @@ export const canvasFrameworks: Framework[] = [
 		logo: '',
 		tags: ['canvas', 'graphics', 'interactive'],
 		category: 'canvas-svg',
+		tutorials: ['https://www.youtube.com/watch?v=uX9D4n2vI5o'],
 	},
 	{
 		id: 'fabric',
@@ -20,6 +21,7 @@ export const canvasFrameworks: Framework[] = [
 		logo: '',
 		tags: ['canvas', 'graphics', 'interactive'],
 		category: 'canvas-svg',
+		tutorials: ['https://www.youtube.com/watch?v=mghXNWvVGTs'],
 	},
 	{
 		id: 'paper',
@@ -30,6 +32,7 @@ export const canvasFrameworks: Framework[] = [
 		logo: '',
 		tags: ['canvas', 'graphics', 'vector'],
 		category: 'canvas-svg',
+		tutorials: ['https://www.youtube.com/watch?v=v2hqi_pG_aU'],
 	},
 	{
 		id: 'pixi',
@@ -40,5 +43,6 @@ export const canvasFrameworks: Framework[] = [
 		logo: '',
 		tags: ['canvas', 'graphics', '2d'],
 		category: 'canvas-svg',
+		tutorials: ['https://www.youtube.com/watch?v=ajaduDDePIY'],
 	},
 ];

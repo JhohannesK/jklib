@@ -29,6 +29,7 @@ export const allRounderItems: Framework[] = [
 		githubUrl: 'https://github.com/jquery/jquery',
 		tags: ['jquery', 'dom', 'utilities'],
 		category: 'allrounder',
+		tutorials: ['https://www.youtube.com/watch?v=hMxGhHNOkCU'],
 	},
 	{
 		id: 'nanoJS',

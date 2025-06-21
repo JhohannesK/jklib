@@ -10,8 +10,41 @@ import Tutorials from './tutorials';
 import Overview from './overview';
 import { Framework } from '@/lib/types';
 import { Badge } from '../ui/badge';
+import Alternatives from './alternatives';
 
-const FrameworkPage = ({ framework }: { framework: Framework }) => {
+type Release = {
+	tag_name: string;
+	name: string;
+	body: string;
+	published_at: string;
+};
+
+type GithubInfo = {
+	stars: number;
+	open_issues: number;
+	pushed_at: string;
+	readme: string | null;
+	latest_release: string | null;
+	releases: Release[] | null;
+} | null;
+
+type NpmInfo = {
+	version: string;
+	license: string;
+	dependencies: number;
+} | null;
+
+const FrameworkPage = ({
+	framework,
+	githubInfo,
+	npmInfo,
+	allFrameworks,
+}: {
+	framework: Framework;
+	githubInfo: GithubInfo;
+	npmInfo: NpmInfo;
+	allFrameworks: Framework[];
+}) => {
 	const [activeTab, setActiveTab] = useState('overview');
 	const [isFavorite, setIsFavorite] = useState(false);
 
@@ -48,10 +81,22 @@ const FrameworkPage = ({ framework }: { framework: Framework }) => {
 										className='flex items-center gap-1 hover:text-primary'
 									>
 										<Github className='w-4 h-4' />
-										<span>GitHub</span>
+										<span>
+											{githubInfo?.stars
+												? `${(githubInfo.stars / 1000).toFixed(
+														1
+												  )}k stars`
+												: 'GitHub'}
+										</span>
 									</a>
 								)}
-								<div className='text-sm'>Updated 3 months ago</div>
+								<div className='text-sm'>
+									{githubInfo?.pushed_at
+										? `Updated ${new Date(
+												githubInfo.pushed_at
+										  ).toLocaleDateString()}`
+										: ''}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -106,11 +151,19 @@ const FrameworkPage = ({ framework }: { framework: Framework }) => {
 					</TabsList>
 
 					<TabsContent value='overview' className='space-y-8'>
-						<Overview framework={framework} />
+						<Overview
+							framework={framework}
+							githubInfo={githubInfo}
+							npmInfo={npmInfo}
+						/>
 					</TabsContent>
 
 					<TabsContent value='installation' className='space-y-6'>
-						<Installation framework={framework} />
+						<Installation
+							framework={framework}
+							githubInfo={githubInfo}
+							version={githubInfo?.latest_release || npmInfo?.version}
+						/>
 					</TabsContent>
 
 					<TabsContent value='tutorials' className='space-y-6'>
@@ -121,10 +174,12 @@ const FrameworkPage = ({ framework }: { framework: Framework }) => {
 						<Reviews framework={framework} />
 					</TabsContent>
 
-					<TabsContent
-						value='alternatives'
-						className='space-y-6'
-					></TabsContent>
+					<TabsContent value='alternatives' className='space-y-6'>
+						<Alternatives
+							framework={framework}
+							allFrameworks={allFrameworks}
+						/>
+					</TabsContent>
 				</Tabs>
 			</div>
 		</main>

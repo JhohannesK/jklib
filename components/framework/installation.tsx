@@ -11,10 +11,55 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Copy } from 'lucide-react';
 import { Framework } from '@/lib/types';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
-const Installation = ({ framework }: { framework: Framework }) => {
+type Release = {
+	tag_name: string;
+	name: string;
+	body: string;
+	published_at: string;
+};
+
+type GithubInfo = {
+	releases: Release[] | null;
+} | null;
+
+function formatDistanceToNow(dateString: string) {
+	const date = new Date(dateString);
+	const now = new Date();
+	const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+	const diffInMinutes = Math.floor(diffInSeconds / 60);
+	const diffInHours = Math.floor(diffInMinutes / 60);
+	const diffInDays = Math.floor(diffInHours / 24);
+	const diffInMonths = Math.floor(diffInDays / 30.44);
+	const diffInYears = Math.floor(diffInDays / 365.25);
+
+	if (diffInYears > 0)
+		return `${diffInYears} year${diffInYears > 1 ? 's' : ''} ago`;
+	if (diffInMonths > 0)
+		return `${diffInMonths} month${diffInMonths > 1 ? 's' : ''} ago`;
+	if (diffInDays > 0)
+		return `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
+	if (diffInHours > 0)
+		return `${diffInHours} hour${diffInHours > 1 ? 's' : ''} ago`;
+	if (diffInMinutes > 0)
+		return `${diffInMinutes} minute${diffInMinutes > 1 ? 's' : ''} ago`;
+	return `just now`;
+}
+
+const Installation = ({
+	framework,
+	githubInfo,
+	version,
+}: {
+	framework: Framework;
+	githubInfo: GithubInfo;
+	version?: string;
+}) => {
 	return (
-		<>
+		<div className='space-y-6'>
 			<Card className='py-3'>
 				<CardHeader>
 					<CardTitle>Installation</CardTitle>
@@ -31,15 +76,48 @@ const Installation = ({ framework }: { framework: Framework }) => {
 								style={tomorrow}
 								className='rounded-md'
 							>
-								{`npm install ${framework.id}`}
+								{`npm install ${
+									framework.installationName || framework.id
+								}`}
 							</SyntaxHighlighter>
 							<Button
 								variant='ghost'
 								size='icon'
-								className='absolute right-2 top-2'
+								className='absolute text-white right-2 top-2'
 								onClick={() =>
 									navigator.clipboard.writeText(
-										`npm install ${framework.id}`
+										`npm install ${
+											framework.installationName || framework.id
+										}`
+									)
+								}
+							>
+								<Copy className='w-4 h-4' />
+							</Button>
+						</div>
+					</div>
+
+					<div>
+						<h3 className='mb-2 text-lg font-medium'>PNPM</h3>
+						<div className='relative'>
+							<SyntaxHighlighter
+								language='bash'
+								style={tomorrow}
+								className='rounded-md'
+							>
+								{`pnpm add ${
+									framework.installationName || framework.id
+								}`}
+							</SyntaxHighlighter>
+							<Button
+								variant='ghost'
+								size='icon'
+								className='absolute text-white right-2 top-2'
+								onClick={() =>
+									navigator.clipboard.writeText(
+										`pnpm add ${
+											framework.installationName || framework.id
+										}`
 									)
 								}
 							>
@@ -56,15 +134,19 @@ const Installation = ({ framework }: { framework: Framework }) => {
 								style={tomorrow}
 								className='rounded-md'
 							>
-								{`yarn add ${framework.id}`}
+								{`yarn add ${
+									framework.installationName || framework.id
+								}`}
 							</SyntaxHighlighter>
 							<Button
 								variant='ghost'
 								size='icon'
-								className='absolute right-2 top-2'
+								className='absolute text-white right-2 top-2'
 								onClick={() =>
 									navigator.clipboard.writeText(
-										`yarn add ${framework.id}`
+										`yarn add ${
+											framework.installationName || framework.id
+										}`
 									)
 								}
 							>
@@ -81,15 +163,23 @@ const Installation = ({ framework }: { framework: Framework }) => {
 								style={tomorrow}
 								className='rounded-md'
 							>
-								{`<script src="https://cdn.jsdelivr.net/npm/${framework.id}@latest/dist/${framework.id}.min.js"></script>`}
+								{`<script src="https://cdn.jsdelivr.net/npm/${
+									framework.installationName || framework.id
+								}@latest/dist/${
+									framework.installationName || framework.id
+								}.min.js"></script>`}
 							</SyntaxHighlighter>
 							<Button
 								variant='ghost'
 								size='icon'
-								className='absolute right-2 top-2'
+								className='absolute text-white right-2 top-2'
 								onClick={() =>
 									navigator.clipboard.writeText(
-										`<script src="https://cdn.jsdelivr.net/npm/${framework.id}@latest/dist/${framework.id}.min.js"></script>`
+										`<script src="https://cdn.jsdelivr.net/npm/${
+											framework.installationName || framework.id
+										}@latest/dist/${
+											framework.installationName || framework.id
+										}.min.js"></script>`
 									)
 								}
 							>
@@ -110,18 +200,20 @@ const Installation = ({ framework }: { framework: Framework }) => {
 							>
 								{`{
   "dependencies": {
-    "${framework.id}": "^2.3.1"
+    "${framework.installationName || framework.id}": "^${
+									version?.startsWith('v') ? version.slice(1) : version
+								}"
   }
 }`}
 							</SyntaxHighlighter>
 							<Button
 								variant='ghost'
 								size='icon'
-								className='absolute right-2 top-2'
+								className='absolute text-white right-2 top-2'
 								onClick={() =>
 									navigator.clipboard.writeText(`{
   "dependencies": {
-    "${framework.id}": "^2.3.1"
+    "${framework.installationName || framework.id}": "^${version}"
   }
 }`)
 								}
@@ -136,62 +228,52 @@ const Installation = ({ framework }: { framework: Framework }) => {
 			<Card className='py-3'>
 				<CardHeader>
 					<CardTitle>Version History</CardTitle>
-					<CardDescription>Recent releases and changes</CardDescription>
+					<CardDescription>
+						Recent releases from the GitHub repository
+					</CardDescription>
 				</CardHeader>
-				<CardContent className='space-y-4'>
-					<div className='space-y-2'>
-						<div className='flex items-center justify-between'>
-							<h3 className='font-medium'>v2.3.1</h3>
-							<span className='text-sm text-muted-foreground'>
-								1 month ago
-							</span>
-						</div>
-						<p className='text-sm'>
-							Bug fixes and performance improvements
+				<CardContent className='space-y-6'>
+					{githubInfo?.releases && githubInfo.releases.length > 0 ? (
+						githubInfo.releases.map((release) => (
+							<div key={release.tag_name} className='space-y-2'>
+								<div className='flex items-center justify-between'>
+									<h3 className='font-medium'>
+										{release.name || release.tag_name}
+									</h3>
+									<span className='text-sm text-muted-foreground'>
+										{formatDistanceToNow(release.published_at)}
+									</span>
+								</div>
+								<div className='prose prose-sm max-w-none dark:prose-invert'>
+									<ReactMarkdown
+										remarkPlugins={[remarkGfm]}
+										rehypePlugins={[rehypeRaw]}
+									>
+										{release.body}
+									</ReactMarkdown>
+								</div>
+							</div>
+						))
+					) : (
+						<p className='text-sm text-muted-foreground'>
+							No release history found on GitHub.
 						</p>
-						<ul className='pl-6 text-sm list-disc'>
-							<li>Fixed an issue with event handling</li>
-							<li>Improved rendering performance</li>
-							<li>Updated dependencies</li>
-						</ul>
-					</div>
+					)}
 
-					<div className='space-y-2'>
-						<div className='flex items-center justify-between'>
-							<h3 className='font-medium'>v2.3.0</h3>
-							<span className='text-sm text-muted-foreground'>
-								3 months ago
-							</span>
-						</div>
-						<p className='text-sm'>New features and enhancements</p>
-						<ul className='pl-6 text-sm list-disc'>
-							<li>Added new API for improved state management</li>
-							<li>Enhanced TypeScript definitions</li>
-							<li>Added support for server components</li>
-						</ul>
-					</div>
-
-					<div className='space-y-2'>
-						<div className='flex items-center justify-between'>
-							<h3 className='font-medium'>v2.2.0</h3>
-							<span className='text-sm text-muted-foreground'>
-								6 months ago
-							</span>
-						</div>
-						<p className='text-sm'>Major update with breaking changes</p>
-						<ul className='pl-6 text-sm list-disc'>
-							<li>Complete rewrite of core rendering engine</li>
-							<li>New component API</li>
-							<li>Improved documentation</li>
-						</ul>
-					</div>
-
-					<Button variant='outline' className='w-full'>
-						View Full Changelog
-					</Button>
+					{framework.githubUrl && (
+						<Button variant='outline' className='w-full' asChild>
+							<a
+								href={`${framework.githubUrl}/releases`}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								View Full Changelog on GitHub
+							</a>
+						</Button>
+					)}
 				</CardContent>
 			</Card>
-		</>
+		</div>
 	);
 };
 

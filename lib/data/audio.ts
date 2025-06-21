@@ -10,6 +10,7 @@ export const audioFrameworks: Framework[] = [
 		logo: '',
 		tags: ['audio', 'web-audio', 'sound'],
 		category: 'audio',
+		tutorials: ['https://www.youtube.com/watch?v=cRZfNzOx4K8'],
 	},
 	{
 		id: 'tone',
@@ -21,6 +22,7 @@ export const audioFrameworks: Framework[] = [
 		logo: '',
 		tags: ['audio', 'music', 'synthesis'],
 		category: 'audio',
+		tutorials: ['https://www.youtube.com/watch?v=0uXDdTyYBYQ'],
 	},
 	{
 		id: 'wavesurfer',
@@ -32,6 +34,7 @@ export const audioFrameworks: Framework[] = [
 		logo: '',
 		tags: ['audio', 'visualization', 'waveform'],
 		category: 'audio',
+		tutorials: ['https://www.youtube.com/watch?v=sW1Nbpt1tbg'],
 	},
 	{
 		id: 'soundjs',

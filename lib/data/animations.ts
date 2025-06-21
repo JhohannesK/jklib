@@ -10,6 +10,7 @@ export const animationsItems: Framework[] = [
 		logo: '',
 		tags: ['animation', 'javascript'],
 		category: 'animations',
+		tutorials: ['https://www.youtube.com/watch?v=m6PDUIF24v4'],
 	},
 	{
 		id: 'aceternity',
@@ -51,5 +52,6 @@ export const animationsItems: Framework[] = [
 		logo: '',
 		tags: ['animation', 'javascript'],
 		category: 'animations',
+		tutorials: ['https://www.youtube.com/watch?v=CZAXucMryxU'],
 	},
 ];

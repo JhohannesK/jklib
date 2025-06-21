@@ -10,6 +10,12 @@ export const componentlibItems: Framework[] = [
 		tags: ['ui', 'components', 'v0'],
 		url: 'https://ui.shadcn.com/',
 		githubUrl: 'https://github.com/shadcn-ui/ui',
+		tutorials: [
+			'https://www.youtube.com/watch?v=2Eqg6Ea45cY',
+			'https://www.youtube.com/watch?v=5TH3V_5ncmQ',
+			'https://www.youtube.com/watch?v=SjsQdfvxjL8',
+			'https://www.youtube.com/watch?v=O4gV1o1GXJ0',
+		],
 	},
 	{
 		id: 'materialUi',
@@ -20,6 +26,12 @@ export const componentlibItems: Framework[] = [
 		tags: ['ui', 'components'],
 		url: 'https://mui.com/',
 		githubUrl: 'https://github.com/mui/material-ui',
+		tutorials: [
+			'https://www.youtube.com/watch?v=ewgwqNbyEZk',
+			'https://www.youtube.com/watch?v=LovXwzFPw9c',
+			'https://www.youtube.com/watch?v=FB-sKY63AWo',
+			'https://www.youtube.com/watch?v=vyJU9efvUtQ',
+		],
 	},
 	{
 		id: 'semanticUI',
@@ -29,6 +41,11 @@ export const componentlibItems: Framework[] = [
 		tags: ['ui', 'components'],
 		url: 'https://react.semantic-ui.com/',
 		githubUrl: 'https://github.com/Semantic-Org/Semantic-UI-React',
+		tutorials: [
+			'https://www.youtube.com/watch?v=H7kqE4JEqDw',
+			'https://www.youtube.com/watch?v=7oIBxADApsM',
+			'https://www.youtube.com/watch?v=a9mUH1EWp40',
+		],
 	},
 	{
 		id: 'chakra',
@@ -39,6 +56,12 @@ export const componentlibItems: Framework[] = [
 		tags: ['ui', 'components'],
 		url: 'https://chakra-ui.com/',
 		githubUrl: 'https://github.com/chakra-ui/chakra-ui',
+		tutorials: [
+			'https://www.youtube.com/watch?v=iXsM6NkEmFc',
+			'https://www.youtube.com/watch?v=pExAE289j9s',
+			'https://www.youtube.com/watch?v=CI53pMWjD3g',
+			'https://www.youtube.com/watch?v=Z9SOAweBYdk',
+		],
 	},
 	{
 		id: 'ant design',
@@ -49,6 +72,12 @@ export const componentlibItems: Framework[] = [
 		tags: ['ui', 'components'],
 		url: 'https://ant.design/',
 		githubUrl: 'https://github.com/ant-design/ant-design',
+		tutorials: [
+			'https://www.youtube.com/watch?v=XLoLhD93IpY',
+			'https://www.youtube.com/watch?v=1HWVUkCTiM8',
+			'https://www.youtube.com/watch?v=QkPJV9DonZ0',
+			'https://www.youtube.com/watch?v=2G39SwSd0Fg',
+		],
 	},
 	{
 		id: 'heroUI',
@@ -69,5 +98,9 @@ export const componentlibItems: Framework[] = [
 		tags: ['ui', 'components'],
 		url: 'https://mantine.dev/',
 		githubUrl: 'https://github.com/mantinedev/mantine',
+		tutorials: [
+			'https://www.youtube.com/watch?v=PQ9htM_LBVs',
+			'https://www.youtube.com/watch?v=KdIL4CVorzA',
+		],
 	},
 ];

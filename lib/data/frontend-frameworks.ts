@@ -10,6 +10,7 @@ export const frontendFrameworks: Framework[] = [
 		logo: '',
 		tags: ['ui', 'components', 'virtual-dom'],
 		category: 'frontend-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=U5ETOo6R5vM'],
 	},
 	{
 		id: 'vue',
@@ -20,6 +21,7 @@ export const frontendFrameworks: Framework[] = [
 		logo: '',
 		tags: ['ui', 'components', 'reactive'],
 		category: 'frontend-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=sUH7PDUswio'],
 	},
 	{
 		id: 'svelte',
@@ -30,6 +32,7 @@ export const frontendFrameworks: Framework[] = [
 		logo: '',
 		tags: ['ui', 'components', 'compiler'],
 		category: 'frontend-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=uWDBEUkTRGk'],
 	},
 	{
 		id: 'angular',

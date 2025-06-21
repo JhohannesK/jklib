@@ -10,6 +10,7 @@ export const cssUiFrameworkItems: Framework[] = [
 		logo: '',
 		tags: ['css', 'framework', 'utility'],
 		category: 'css-ui-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=pYaamz6AyvU'],
 	},
 	{
 		id: 'bootstrap',
@@ -21,6 +22,7 @@ export const cssUiFrameworkItems: Framework[] = [
 		logo: '',
 		tags: ['css', 'framework', 'responsive'],
 		category: 'css-ui-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=eZCLMUmYX5Y'],
 	},
 	{
 		id: 'bulma',
@@ -31,6 +33,7 @@ export const cssUiFrameworkItems: Framework[] = [
 		logo: '',
 		tags: ['css', 'framework', 'flexbox'],
 		category: 'css-ui-frameworks',
+		tutorials: ['https://www.youtube.com/watch?v=IiPQYQT2-wg'],
 	},
 	{
 		id: 'unocss',

@@ -27,6 +27,12 @@ export const validationItems: Framework[] = [
 		githubUrl: 'https://github.com/jquense/yup',
 		tags: ['validation', 'forms', 'schema'],
 		category: 'validation',
+		tutorials: [
+			'https://www.youtube.com/watch?v=9rp_1TYDlkY',
+			'https://www.youtube.com/watch?v=RQ1E2EjyqY4',
+			'https://www.youtube.com/watch?v=_yFMJfe-Yr8',
+			'https://www.youtube.com/watch?v=gpOUFrYhOIg',
+		],
 	},
 	{
 		id: 'zod',
@@ -36,6 +42,12 @@ export const validationItems: Framework[] = [
 		githubUrl: 'https://github.com/colinhacks/zod',
 		tags: ['validation', 'typescript', 'schema'],
 		category: 'validation',
+		tutorials: [
+			'https://www.youtube.com/watch?v=IcyjtsAdKRs',
+			'https://www.youtube.com/watch?v=AVyJt3OTvdE',
+			'https://www.youtube.com/watch?v=T31Jkma_WCI',
+			'https://www.youtube.com/watch?v=L6BE-U3oy80',
+		],
 	},
 	{
 		id: 'class-validator',
@@ -45,5 +57,10 @@ export const validationItems: Framework[] = [
 		githubUrl: 'https://github.com/typestack/class-validator',
 		tags: ['validation', 'decorators', 'typescript'],
 		category: 'validation',
+		tutorials: [
+			'https://www.youtube.com/watch?v=e60Y1p2hEBE',
+			'https://www.youtube.com/watch?v=D46R2cykFt0',
+			'https://www.youtube.com/watch?v=BRN-kY4UZ4c',
+		],
 	},
 ];

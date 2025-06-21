@@ -6,8 +6,10 @@ export interface Framework {
 	description: string;
 	url: string;
 	logo?: string;
+	installationName?: string;
 	tags: string[];
 	githubUrl?: string;
+	tutorials?: string[];
 	forks?: number;
 	category:
 		| '3d-webgl-frameworks'

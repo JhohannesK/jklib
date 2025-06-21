@@ -10,6 +10,7 @@ export const chartItems: Framework[] = [
 		logo: '',
 		tags: ['data', 'visualization', 'svg'],
 		category: 'charts',
+		tutorials: ['https://www.youtube.com/watch?v=FSlxP47NyCU'],
 	},
 	{
 		id: 'chartjs',
@@ -21,6 +22,7 @@ export const chartItems: Framework[] = [
 		logo: '',
 		tags: ['charts', 'canvas', 'responsive'],
 		category: 'charts',
+		tutorials: ['https://www.youtube.com/watch?v=NySBh_DIRlg'],
 	},
 	{
 		id: 'echarts',
@@ -31,6 +33,7 @@ export const chartItems: Framework[] = [
 		logo: '',
 		tags: ['charts', 'visualization', 'canvas'],
 		category: 'charts',
+		tutorials: ['https://www.youtube.com/watch?v=UINdSjavjss'],
 	},
 	{
 		id: 'highcharts',
@@ -41,5 +44,6 @@ export const chartItems: Framework[] = [
 		logo: '',
 		tags: ['charts', 'interactive', 'svg'],
 		category: 'charts',
+		tutorials: ['https://www.youtube.com/watch?v=zFmQQLu1yxk'],
 	},
 ];

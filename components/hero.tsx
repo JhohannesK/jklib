@@ -7,8 +7,20 @@ import { Button } from './ui/button';
 import { Search } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const Hero = () => {
+	const router = useRouter();
+	const [query, setQuery] = useState('');
+
+	const handleSearch = (e: React.FormEvent) => {
+		e.preventDefault();
+		if (query) {
+			router.push(`/search?q=${query}`);
+		}
+	};
+
 	return (
 		<section className='bg-gradient-to-b from-primary/10 to-background pb-12 md:pb-24 flex items-center justify-center flex-col'>
 			<div className='container'>
@@ -38,15 +50,20 @@ const Hero = () => {
 						</motion.h1>
 					</LampContainer>
 
-					<div className='flex w-full max-w-sm items-center space-x-2 px-4 md:px-6'>
+					<form
+						onSubmit={handleSearch}
+						className='flex w-full max-w-sm items-center space-x-2'
+					>
 						<Input
 							type='text'
 							placeholder='Search frameworks, libraries, tools...'
+							value={query}
+							onChange={(e) => setQuery(e.target.value)}
 						/>
 						<Button type='submit' size='icon'>
-							<Search className='h-3 w-3' />
+							<Search className='h-4 w-4' />
 						</Button>
-					</div>
+					</form>
 					<div className='flex flex-wrap justify-center gap-2 px-4 md:px-6'>
 						{[
 							'framework',
