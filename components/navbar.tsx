@@ -47,9 +47,9 @@ const Navbar = () => {
 								>
 									Categories
 								</Link>
-								<Link href='/search' className='text-lg font-medium'>
+								{/* <Link href='/search' className='text-lg font-medium'>
 									Search
-								</Link>
+								</Link> */}
 								<Link href='/about' className='text-lg font-medium'>
 									About
 								</Link>

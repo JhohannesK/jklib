@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
 	return (
-		<main className='container py-12 mx-auto max-w-3xl'>
-			<div className='mx-auto max-w-3xl space-y-8'>
+		<main className='container max-w-3xl px-3 py-12 mx-auto'>
+			<div className='max-w-3xl mx-auto space-y-8'>
 				<div className='space-y-2'>
 					<h1 className='text-4xl font-bold tracking-tight'>
 						About jklib
@@ -58,7 +58,7 @@ export default function AboutPage() {
 								rel='noopener noreferrer'
 								className='flex items-center gap-2'
 							>
-								<Github className='h-5 w-5' />
+								<Github className='w-5 h-5' />
 								<span>Contribute on GitHub</span>
 							</a>
 						</Button>
@@ -72,7 +72,7 @@ export default function AboutPage() {
 						to make it easier to find what you're looking for. Some of the
 						main categories include:
 					</p>
-					<ul className='list-disc pl-6 space-y-2'>
+					<ul className='pl-6 space-y-2 list-disc'>
 						<li>3D/WebGL Frameworks</li>
 						<li>Animations</li>
 						<li>Audio</li>
