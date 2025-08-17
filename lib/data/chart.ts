@@ -46,4 +46,20 @@ export const chartItems: Framework[] = [
 		category: 'charts',
 		tutorials: ['https://www.youtube.com/watch?v=zFmQQLu1yxk'],
 	},
+	{
+		id: 'apexCharts',
+		name: 'ApexCharts',
+		description:
+			'ApexCharts is a modern charting library that helps developers to create beautiful and interactive visualizations for web pages.',
+		url: 'https://apexcharts.com/',
+		githubUrl: 'https://github.com/apexcharts/apexcharts.js',
+		logo: '',
+		tags: ['charts', 'interactive', 'svg', 'open-source'],
+		category: 'charts',
+		tutorials: [
+			'https://youtu.be/3ifYj7rS8Lo?si=aNZ4BZCZEM2W2O4g',
+			'https://youtu.be/JxEyXOlSgV0?si=6dwxsIpTmT6fo4bV',
+			'https://youtu.be/rHOX3TZbOC8?si=Xqn3sbCk71AH9utw',
+		],
+	},
 ];
